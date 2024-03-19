@@ -16,11 +16,14 @@ function UrlHistory() {
       }
 
       try {
-        const response = await axios.get("http://99.79.70.20:8080/api/urls", {
-          headers: {
-            Authorization: `Bearer ${jwtToken}`,
-          },
-        });
+        const response = await axios.get(
+          "http://35.182.211.135:8080/api/urls",
+          {
+            headers: {
+              Authorization: `Bearer ${jwtToken}`,
+            },
+          }
+        );
         setUrlHistory(response.data);
       } catch (err) {
         setError(
