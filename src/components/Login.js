@@ -15,7 +15,7 @@ function Login() {
     event.preventDefault();
     try {
       // Post data to backend for login
-      const response = await axios.post("http://localhost:8080/login", {
+      const response = await axios.post("http://99.79.70.20:8080/login", {
         email,
         password,
       });

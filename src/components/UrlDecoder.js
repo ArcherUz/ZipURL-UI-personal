@@ -25,7 +25,7 @@ function UrlDecoder() {
 
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/urls/${shortUrl}`,
+        `http://99.79.70.20:8080/api/urls/${shortUrl}`,
         {
           headers: {
             Authorization: `Bearer ${jwtToken}`,

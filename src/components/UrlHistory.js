@@ -16,7 +16,7 @@ function UrlHistory() {
       }
 
       try {
-        const response = await axios.get("http://localhost:8080/api/urls", {
+        const response = await axios.get("http://99.79.70.20:8080/api/urls", {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },

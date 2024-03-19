@@ -9,7 +9,7 @@ function Register() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/register", {
+      const response = await axios.post("http://99.79.70.20:8080/register", {
         email,
         password,
       });

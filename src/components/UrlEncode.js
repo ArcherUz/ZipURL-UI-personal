@@ -26,7 +26,7 @@ function UrlEncoder() {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/urls/${algorithm}`,
+        `http://99.79.70.20:8080/api/urls/${algorithm}`,
         { longUrl },
         {
           headers: {
