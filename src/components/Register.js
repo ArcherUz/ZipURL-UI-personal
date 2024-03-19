@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -16,6 +18,7 @@ function Register() {
       console.log("Login success:", response.data);
       const token = response.data;
       localStorage.setItem("jwtToken", token);
+      navigate("/encode");
     } catch (error) {
       //console.log("Login error: " + error.response || error.message);
       if (error.response && error.response.data) {
